@@ -522,3 +522,8 @@ table td {
     vertical-align: top;
     word-break: break-all;
 }
+
+.login-form {
+    width: 300px;
+    padding-left: 1.5rem;
+}

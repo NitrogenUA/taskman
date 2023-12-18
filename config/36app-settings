@@ -1,0 +1,12 @@
+#!/bin/bash
+
+service mysql start
+#composer install
+mkdir tmp logs
+setfacl -R -m u:www-data:rwx tmp
+setfacl -R -d -m u:www-data:rwx tmp
+setfacl -R -m u:www-data:rwx logs
+setfacl -R -d -m u:www-data:rwx logs
+mysql < config/schema/app.sql
+./bin/cake migrations migrate
+./bin/cake migrations seed --seed DatabaseSeed

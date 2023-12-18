@@ -2,7 +2,7 @@
 ##########################
 /config/Migrations/schema-dump-default.lock
 /config/app_local.php
-/config/.env
+#/config/.env
 /logs/*
 /tmp/*
 /vendor/*

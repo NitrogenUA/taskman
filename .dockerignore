@@ -1,0 +1,8 @@
+.git
+plugins
+.*
+!.htaccess
+Dockerfile
+*.dist
+*.md
+*.sh

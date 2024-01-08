@@ -4,15 +4,15 @@
  * @var \App\Model\Entity\Task[]|\Cake\Collection\CollectionInterface $tasks
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-lg-2 col-md-3 columns" id="actions-sidebar">
+    <ul class="side-nav nav flex-column">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Add New Task'), ['action' => 'add']) ?></li>
+        <li class="nav-item"><?= $this->Html->link(__('Add New Task'), ['action' => 'add'], ['class' => 'nav-link']) ?></li>
     </ul>
 </nav>
-<div class="tasks index large-9 medium-8 columns content">
+<div class="tasks index col-lg-10 col-md-9 columns content">
     <h3><?= __('Tasks') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table class="table table-striped table-bordered table-hover" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>

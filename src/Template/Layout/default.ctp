@@ -27,31 +27,35 @@ $cakeDescription = 'Simple Task Manager';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', [
+        'integrity' => "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN",
+        'crossorigin' => "anonymous"
+    ]) ?>
+    <?= $this->Html->script('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', [
+        'integrity' => "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL",
+        'crossorigin' => "anonymous"
+    ]) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a href="/tasks">Tasks</a></li>
-                <li><a href="/users">Users</a></li>
-                <li><a href="/users/logout">Logout</a></li>
+    <nav class="top-bar expanded navbar navbar-expand-sm bg-dark navbar-dark" data-topbar role="navigation">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand"><?= $this->fetch('title') ?></a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="/tasks" class="nav-link">Tasks</a></li>
+                <li class="nav-item"><a href="/users" class="nav-link">Users</a></li>
+                <li class="nav-item"><a href="/users/logout" class="nav-link">Logout</a></li>
             </ul>
         </div>
     </nav>
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+    <div class="container-fluid clearfix">
+        <div class="row">
+            <?= $this->fetch('content') ?>
+        </div>
     </div>
     <footer>
     </footer>

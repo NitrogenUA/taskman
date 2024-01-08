@@ -4,16 +4,16 @@
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<nav class="col-lg-2 col-md-3 columns" id="actions-sidebar">
+    <ul class="side-nav nav flex-column">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Add New User'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Tasks'), ['controller' => 'Tasks', 'action' => 'index']) ?></li>
+        <li class="nav-item"><?= $this->Html->link(__('Add New User'), ['action' => 'add'], ['class' => 'nav-link']) ?></li>
+        <li class="nav-item"><?= $this->Html->link(__('List Tasks'), ['controller' => 'Tasks', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
     </ul>
 </nav>
-<div class="users index large-9 medium-8 columns content">
+<div class="users index col-lg-10 col-md-9 columns content">
     <h3><?= __('Users') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table class="table table-striped table-bordered table-hover" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>

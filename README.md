@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-To successfully run the project you will require a container engine like [docker](https://docs.docker.com/get-docker/) or [podman](https://podman.io/) installed.
+To run the application you will require a container engine like [docker](https://docs.docker.com/get-docker/) or [podman](https://podman.io/) installed.
 
 ## Installation
 
@@ -12,9 +12,9 @@ To successfully run the project you will require a container engine like [docker
 
 Alternatively you can build and run the application manually by executing following instructions:
 
-First run `docker build -t taskman/demo .` and wait for it to finish.
+From within the project folder execute `docker build -t taskman/demo .` and wait for it to finish.
 
-Then follow with `docker run -itd -p 8080:80 taskman/demo:latest` to launch the application container.
+Then follow with `docker run --rm -itd -p 8080:80 taskman/demo:latest` to launch the application container.
 
 ## Authentication
 
